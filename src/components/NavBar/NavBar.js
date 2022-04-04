@@ -1,6 +1,13 @@
-//import Favourite from "./favourite/Favourite";
+//import FavList from "../Fav/FavList";
+//import { useContext } from "react";
+//import ListContext from "../../store/list-context";
+
 
 export default function NavBar(props) {
+ //const ctx=useContext(ListContext);
+
+ 
+
   const inputHandler=(event)=>{
     props.setSearch(event.target.value);
   } 
@@ -15,7 +22,7 @@ export default function NavBar(props) {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
           <li className="nav-item">
-            <a className="nav-link active" aria-current="page" href="/">Favourite</a>
+          <button className="btn btn-primary" onClick={props.onShow}>Favourite</button>
           </li>
         </ul>
         <form className="d-flex">
